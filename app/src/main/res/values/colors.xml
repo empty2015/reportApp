@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+
+    <color name="style_white">#ffffff</color>
+    <color name="style_black">#000000</color>
+    <color name="style_gray">#4d9B9B9B</color>
+
+
+
+    <!-- 样式-->
+    <color name="background">@color/style_white</color>
+    <color name="label_color">@color/style_black</color>
+    <color name="space_bg">@color/style_gray</color>
+</resources>

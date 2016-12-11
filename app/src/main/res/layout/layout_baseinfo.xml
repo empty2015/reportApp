@@ -1,0 +1,838 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:id="@+id/tv_subject"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/style_black"
+        android:text="工业企业基本情况"/>
+
+
+    <include layout="@layout/layout_gap"/>
+    <!--法定代表-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="法定代表人"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:background="@null"
+            android:hint="请输入法定代表人"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/edit_agent" />
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+    <!--行政区划代码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="行政区划代码"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:background="@null"
+            android:hint="请输入行政区域代码"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/edit_code" />
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+    <!--地址-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="详细地址"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="80dp"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="省(自治区，直辖市)"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="80dp"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="地区（市,州，盟）"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="55dp"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="县（区,市,旗）"
+                    android:textSize="12sp"
+                    android:id="@+id/textView" />
+
+                <EditText
+                    android:layout_width="55dp"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:text="乡(镇)"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:hint="请输入"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content"
+                    android:text="街(镇),门牌号"/>
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+    <!--位置信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="企业地理位置"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:background="@null"
+            android:enabled="false"
+            android:hint="当前经纬度坐标"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/edit_gps" />
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+    <!--联系方式-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="联系方式"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="电话号码:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入电话"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="传真号码:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入电话"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="联系人:"/>
+
+                <EditText
+                    android:layout_width="75dp"
+                    android:textSize="10sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入联系人"
+                    android:id="@+id/editText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="邮政编码:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:textSize="10sp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入联系人"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+    <!--登记信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="登记注册类型"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:background="@null"
+            android:enabled="false"
+            android:hint="按企业登记注册类型填相应代码"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/edit_register_type" />
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+    <!--位置信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="企业规模"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:gravity="left|center_vertical"
+            android:hint="请选择"
+            android:id="@+id/edit_scale"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            />
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+
+    <!--行业类别-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="行业类别"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:background="@null"
+            android:enabled="false"
+            android:hint="行业名称及行业代码"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/edit_industry_type" />
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+
+    <!--开业时间-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="开业时间"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:gravity="left|center_vertical"
+            android:hint="请选择"
+            android:id="@+id/edit_open_time"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            />
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+    <!--所在流域-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="所在流域"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:background="@null"
+            android:enabled="false"
+            android:hint="流域名称及流域代码"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+            android:id="@+id/edit_industry_river" />
+
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+    <!--排水去向类型-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="排水去向类型"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_marginLeft="4dp"
+            android:padding="1dp"
+            android:background="@null"
+            android:enabled="false"
+            android:hint="排水去向类型及排水去向代码"
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            android:layout_marginRight="10dp"
+             />
+
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+
+
+    <!--排入的污水处理厂-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="污水处理厂"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="处理厂名称:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入名称"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="处理厂代码:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入代码"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+
+    <!--受纳水体-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="受纳水体"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="名称:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入受纳水体名称"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="代码:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入受纳水体代码"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+
+    <!--工业集聚区-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="工业集聚区"
+            android:layout_marginLeft="15dp"
+            android:gravity="left|center_vertical"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="名称:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入工业集聚区名称"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+
+                android:layout_marginRight="10dp"
+                android:background="#FFCCCCCC"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="代码:"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/style_black"
+                    android:textColorHint="@color/style_gray"
+                    android:hint="请输入工业集聚区代码"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1px"
+            android:background="#000000"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#FFCCCCCC"/>
+
+    <!--底部空白-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+</LinearLayout>
