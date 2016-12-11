@@ -3,6 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
+    android:background="@color/background"
     android:layout_height="match_parent">
     <TextView
         android:layout_width="match_parent"
@@ -642,13 +643,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="处理厂名称:"/>
+                    android:text="名称:"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/style_black"
                     android:textColorHint="@color/style_gray"
-                    android:hint="请输入名称"/>
+                    android:hint="排入的污水处理厂名称"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
@@ -664,13 +665,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="处理厂代码:"/>
+                    android:text="代码:"/>
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:textColor="@color/style_black"
                     android:textColorHint="@color/style_gray"
-                    android:hint="请输入代码"/>
+                    android:hint="排入的污水处理厂代码"/>
             </LinearLayout>
 
         </LinearLayout>

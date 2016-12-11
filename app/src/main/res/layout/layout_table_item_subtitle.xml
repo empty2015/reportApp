@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/background"
+    android:layout_height="match_parent">
+
+    <!--工业总产值-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp" android:orientation="horizontal">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:id="@+id/tv_label"
+                android:layout_marginLeft="15dp"
+                android:text="其中:"/>
+            <TextView
+                android:textSize="12sp"
+                android:layout_width="match_parent"
+                android:id="@+id/tv_label1"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/tv_label"
+                android:layout_alignBaseline="@id/tv_label"
+                android:text="工业总产值\n(当年价格)"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:background="#FFCCCCCC"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:text="万元"
+            android:id="@+id/tv_label2"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="#FFCCCCCC"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="1"
+            android:id="@+id/tv_label3"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+        <View
+            android:layout_width="1dp"
+            android:background="#FFCCCCCC"
+            android:layout_height="match_parent"/>
+        <EditText
+            android:id="@+id/edit_label"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:background="@null"
+
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:hint=""
+            android:textColor="@color/style_black"
+            android:textColorHint="@color/style_gray"
+            android:layout_height="match_parent"
+            />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#FFCCCCCC"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

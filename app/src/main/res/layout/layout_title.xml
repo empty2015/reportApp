@@ -7,8 +7,18 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_weight="1"
+        android:id="@+id/rl_back"
         android:background="@color/colorPrimary"
-        android:layout_height="fill_parent"></RelativeLayout>
+        android:layout_height="fill_parent">
+        <ImageView
+            android:visibility="invisible"
+            android:layout_width="20dp"
+            android:id="@+id/iv_back"
+            android:layout_height="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/btn_back_normal"/>
+    </RelativeLayout>
     <TextView
         android:layout_weight="4"
         android:layout_width="0dp"
