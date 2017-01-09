@@ -4,20 +4,15 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.envrionment.report.R;
-import com.envrionment.report.TablePart1Bean;
 import com.envrionment.report.TablePartResult;
 import com.envrionment.report.adapter.Myadapter;
 import com.envrionment.report.utils.FileUtil;
-import com.envrionment.report.utils.ToolUtil;
 
 /**
  * Created by mac on 12/11/16.

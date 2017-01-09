@@ -18,6 +18,16 @@
             android:layout_marginLeft="15dp"
             android:layout_centerVertical="true"
             android:src="@mipmap/btn_back_normal"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/style_white"
+            android:text="上一页"
+            android:id="@+id/tv_left"
+            android:visibility="gone"
+            />
     </RelativeLayout>
     <TextView
         android:layout_weight="4"
@@ -34,5 +44,15 @@
         android:layout_width="0dp"
         android:layout_weight="1"
         android:background="@color/colorPrimary"
-        android:layout_height="fill_parent"></RelativeLayout>
+        android:layout_height="fill_parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:id="@+id/tv_right"
+            android:textColor="@color/style_white"
+            android:text="下一页"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            android:layout_height="match_parent" />
+    </RelativeLayout>
 </LinearLayout>

@@ -56,5 +56,20 @@
             android:layout_below="@id/view_line"
             android:text="基102表填写"/>
 
+        <ImageView
+            android:layout_above="@id/tv_baseinfo"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/iv_header"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:layout_below="@id/tv_102"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:id="@+id/iv_header1"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"/>
     </RelativeLayout>
 </LinearLayout>

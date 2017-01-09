@@ -7,14 +7,14 @@ import java.util.List;
  */
 
 public class TablePartResult {
-    public List<TablePart1Bean> getItems() {
+    public List<TablePartBean> getItems() {
         return items;
     }
 
-    public void setItems(List<TablePart1Bean> items) {
+    public void setItems(List<TablePartBean> items) {
         this.items = items;
     }
 
-    private List<TablePart1Bean> items;
+    private List<TablePartBean> items;
 
 }

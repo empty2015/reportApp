@@ -32,7 +32,7 @@
         </RelativeLayout>
 
         <View
-            android:layout_width="1dp"
+            android:layout_width="1px"
             android:background="#FFCCCCCC"
             android:layout_height="match_parent"/>
         <TextView
@@ -43,7 +43,7 @@
             android:gravity="center"
             android:layout_height="match_parent" />
         <View
-            android:layout_width="1dp"
+            android:layout_width="1px"
             android:background="#FFCCCCCC"
             android:layout_height="match_parent"/>
         <TextView
@@ -54,7 +54,7 @@
             android:gravity="center"
             android:layout_height="match_parent" />
         <View
-            android:layout_width="1dp"
+            android:layout_width="1px"
             android:background="#FFCCCCCC"
             android:layout_height="match_parent"/>
         <EditText
@@ -74,6 +74,6 @@
     <View
         android:layout_width="match_parent"
         android:background="#FFCCCCCC"
-        android:layout_height="1dp"/>
+        android:layout_height="1px"/>
 
 </LinearLayout>
