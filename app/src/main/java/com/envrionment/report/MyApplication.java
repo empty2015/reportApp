@@ -6,6 +6,8 @@ import android.content.Context;
 import com.hsfs.BrandModel;
 import com.hsfs.Conf;
 import com.hsfs.Init;
+import com.lib.JniClient;
+import com.ucarjni.UCARJNI;
 
 import java.io.InputStream;
 
