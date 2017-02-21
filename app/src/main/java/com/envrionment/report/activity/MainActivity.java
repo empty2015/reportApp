@@ -1,5 +1,6 @@
 package com.envrionment.report.activity;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -7,6 +8,9 @@ import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
+import android.os.Build;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.CharacterPickerDialog;
@@ -51,13 +55,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     @BindView(R.id.tv_right)
     TextView tv_right;
-    @BindView(R.id.iv_header)
-    ImageView imageView;
-    @BindView(R.id.iv_header1)
-    ImageView iv_header1;
 
 
-    @OnClick({R.id.tv_101,R.id.tv_102,R.id.tv_baseinfo,R.id.tv_right})
+
+
+    @OnClick({R.id.tv_101,R.id.tv_102,R.id.tv_baseinfo,R.id.tv_right,R.id.tv_react})
     @Override
     public void onClick(View view) {
 
@@ -68,6 +70,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 intent = new Intent(MainActivity.this,Table101Activity.class);
                 break;
             case R.id.tv_102:
+                Intent intent1 = new Intent();
+                ComponentName componentName = new ComponentName(MainActivity.this,"com.envrionment.report.activity.TmpActivity");
+                intent1.setComponent(componentName);
+                startActivity(intent1);
                 return;
 
             case R.id.tv_baseinfo:
@@ -75,8 +81,38 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 break;
             case R.id.tv_right:
                 return;
+            case R.id.tv_react:
+                showReactApp();
+                return;
         }
         startActivity(intent);
+    }
+
+    private static final int OVERLAY_PERMISSION_REQ_CODE = 100;
+    private void showReactApp(){
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if (!Settings.canDrawOverlays(this)) {
+                Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION,
+                        Uri.parse("package:" + getPackageName()));
+                startActivityForResult(intent, OVERLAY_PERMISSION_REQ_CODE);
+            }else{
+                Intent intent = new Intent(this,MyReactActivity.class);
+                startActivity(intent);
+            }
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == OVERLAY_PERMISSION_REQ_CODE) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                if (Settings.canDrawOverlays(this)) {
+                    Intent intent = new Intent(this,MyReactActivity.class);
+                    startActivity(intent);
+                }
+            }
+        }
     }
 
 
@@ -96,44 +132,4 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     }
 
-
-    public static class CircleTransform extends BitmapTransformation {
-        public CircleTransform(Context context) {
-            super(context);
-        }
-
-        @Override
-        protected Bitmap transform(BitmapPool pool, Bitmap toTransform, int outWidth, int outHeight) {
-            return circleCrop(pool, toTransform);
-        }
-
-        private static Bitmap circleCrop(BitmapPool pool, Bitmap source) {
-            if (source == null) return null;
-
-            int size = Math.min(source.getWidth(), source.getHeight());
-            int x = (source.getWidth() - size) / 2;
-            int y = (source.getHeight() - size) / 2;
-
-            // TODO this could be acquired from the pool too
-            Bitmap squared = Bitmap.createBitmap(source, x, y, size, size);
-
-            Bitmap result = pool.get(size, size, Bitmap.Config.ARGB_8888);
-            if (result == null) {
-                result = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888);
-            }
-
-            Canvas canvas = new Canvas(result);
-            Paint paint = new Paint();
-            paint.setShader(new BitmapShader(squared, BitmapShader.TileMode.CLAMP, BitmapShader.TileMode.CLAMP));
-            paint.setAntiAlias(true);
-            float r = size / 2f;
-            canvas.drawCircle(r, r, r, paint);
-            return result;
-        }
-
-        @Override
-        public String getId() {
-            return getClass().getName();
-        }
-    }
 }
